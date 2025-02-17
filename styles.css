@@ -18,6 +18,9 @@
   /* font weights */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+  /* Letter Spacing */
+  --letter-spacing-sm: -0.012em;
+  --letter-spacing-md: -0.013em;
 }
 
 /* Font */
@@ -68,6 +71,13 @@ ol[role="list"] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  background-color: hsl(205, 44%, 93%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
 }
 
 h1,
@@ -112,4 +122,124 @@ textarea:not([rows]) {
 
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* Pricing Component Styles */
+
+.pricing-component {
+  max-width: 19.438rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px 0 hsla(212, 100%, 33%, 0.149);
+}
+
+.join-card,
+.subscription-card,
+.why-us-card {
+  padding: 24px;
+}
+
+.join-card {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.join-card__title {
+  font-size: var(--font-size-lg);
+  color: var(--cyan);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+.join-card__guarantee {
+  margin-top: 24px;
+  color: var(--bright-yellow);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+.join-card__offer {
+  margin-top: 16px;
+  font-size: var(--font-size-xs);
+  color: var(--gray-blue);
+  line-height: 1.8;
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.subscription-card {
+  background-color: var(--cyan);
+  color: hsl(0, 0%, 100%);
+}
+
+.subscription-card__title {
+  font-size: var(--font-size-md);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.subscription-card__price {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subscription-card__price--amount {
+  font-size: var(--font-size-xxl);
+  letter-spacing: var(--letter-spacing-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.subscription-card__price--occurrence {
+  font-size: var(--font-size-base);
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.subscription-card__description {
+  margin-top: 4px;
+  font-size: var(--font-size-base);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+.subscription-card__cta {
+  background-color: var(--bright-yellow);
+  display: block;
+  margin-top: 26px;
+  border-radius: 5px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding-block: 14px;
+  box-shadow: 0 4px 4px 0 hsla(0, 0%, 0%, 0.25);
+}
+
+.subscription-card__cta:hover {
+  background-color: hsl(71, 73%, 40%);
+}
+
+.subscription-card__cta:focus-visible {
+  outline: 3px solid hsl(204, 100%, 40%);
+  outline-offset: 3px;
+}
+
+.why-us-card {
+  background-color: hsla(179, 62%, 43%, 0.8);
+}
+
+.why-us-card__title {
+  font-size: var(--font-size-md);
+  letter-spacing: var(--letter-spacing-sm);
+  color: hsl(0, 0%, 100%);
+}
+
+.why-us-card__list {
+  margin-top: 18px;
+  list-style: none;
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: var(--letter-spacing-sm);
+}
+
+.why-us-card__list-item {
+  line-height: 1.4;
 }
