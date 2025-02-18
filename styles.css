@@ -243,3 +243,38 @@ textarea:not([rows]) {
 .why-us-card__list-item {
   line-height: 1.4;
 }
+
+/* Larger Screen Styles */
+
+@media (min-width: 50rem) {
+  .pricing-component {
+    max-width: 39.688rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "join join"
+      "subscription why-us";
+  }
+
+  .join-card {
+    grid-area: join;
+  }
+
+  .subscription-card {
+    grid-area: subscription;
+  }
+
+  .why-us-card {
+    grid-area: why-us;
+  }
+
+  .join-card,
+  .subscription-card,
+  .why-us-card {
+    padding: 40px;
+  }
+
+  .join-card__offer {
+    font-size: var(--font-size-base);
+  }
+}
